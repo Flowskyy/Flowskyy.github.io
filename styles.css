@@ -1,0 +1,417 @@
+/* ==== HERO SECTION ==== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: url("Main Icon/banner.jpg") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 20px;
+  animation: heroFadeIn 1.5s ease-out forwards;
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+  animation: overlayPulse 6s ease-in-out infinite alternate;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: contentSlideUp 1.2s ease-out forwards 0.5s;
+}
+
+.hero-content h1 {
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  font-size: 3vw;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 8px;
+}
+
+.hero-content .hero-subtitle {
+  font-size: 1.3vw;
+  font-weight: 500;
+  color: #111;
+  margin-top: -2%;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== ANIMATIONS ==== */
+
+/* Fade in background */
+@keyframes heroFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Overlay subtle shimmer */
+@keyframes overlayPulse {
+  0% {
+    background: rgba(255, 255, 255, 0.35);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Content slide up + fade in */
+@keyframes contentSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== RESPONSIVE FIXES ==== */
+@media (max-width: 480px) {
+  .hero {
+    height: 85vh;
+    padding: 0 16px;
+    background-attachment: scroll;
+  }
+  .hero-content h1 {
+    font-size: 6.5vw;
+  }
+  .hero-content .hero-subtitle {
+    font-size: 3.8vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+  .hero-content h1 {
+    font-size: 5vw;
+  }
+  .hero-content .hero-subtitle {
+    font-size: 2.5vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-content h1 {
+    font-size: 3vw;
+  }
+  .hero-content .hero-subtitle {
+    font-size: 1.3vw;
+  }
+}
+
+/* ==== LATEST NEWS SECTION ==== */
+.latest-news .section-header {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+
+.latest-news .section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #8b0010;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.latest-news .section-header h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #8b0010, #b02a37);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.latest-news .section-header p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 8px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==== LINGKUNGAN SEKOLAH SECTION ==== */
+.school-tour .section-header {
+  text-align: center;
+  margin: 70px 0 40px;
+}
+
+.school-tour .section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #8b0010;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.school-tour .section-header h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #8b0010, #b02a37);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.school-tour .section-header p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 4px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .latest-news .section-header h2,
+  .school-tour .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .latest-news .section-header p,
+  .school-tour .section-header p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .latest-news .section-header h2,
+  .school-tour .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .latest-news .section-header p,
+  .school-tour .section-header p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ==== SECTION CAROUSEL ==== */
+.carousel-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 50px 0;
+}
+
+.carousel-section .container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* ==== Rasio 16:9 universal ==== */
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 20px;
+  min-width: 200px;
+  max-width: 880px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.1),
+    4px 0 8px rgba(0, 0, 0, 0.1), -4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20x;
+}
+
+/* ==== Fade Effect ==== */
+.carousel.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel.carousel-fade .carousel-item.active {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* ==== Tombol Navigasi ==== */
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #8b0010;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(139, 0, 16, 0.4);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+/* Tombol di sisi dalam container */
+.custom-prev {
+  left: 30px;
+}
+
+.custom-next {
+  right: 30px;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background-color: #b02a37;
+  box-shadow: 0 6px 14px rgba(176, 42, 55, 0.5);
+}
+
+/* Icon panah */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.carousel-control-prev-icon {
+  transform: rotate(135deg);
+}
+
+.carousel-control-next-icon {
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 1024px) {
+  .carousel-inner{
+    max-width: 660px !important;
+  }
+  .custom-prev {
+    left: 60px !important;
+  }
+
+  .custom-next {
+    right: 60px !important;
+  }
+}
+
+@media (min-width: 820px) {
+  .carousel-inner {
+    max-width: 510px;
+  }
+
+  .custom-prev {
+    left: 20px;
+  }
+
+  .custom-next {
+    right: 20px;
+  }
+}
+@media (min-width: 853px) {
+  .carousel-inner {
+    max-width: 530px;
+  }
+
+  .custom-prev {
+    left: 0px;
+  }
+
+  .custom-next {
+    right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-section .container {
+    border-radius: 16px;
+    max-width: 92%;
+  }
+
+  .carousel-inner {
+    aspect-ratio: 16 / 9;
+    max-width: 580px;
+  }
+
+  .custom-prev,
+  .custom-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+  }
+
+  .custom-prev {
+    left: 0px;
+  }
+
+  .custom-next {
+    right: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-section {
+    padding: 30px 10px;
+  }
+
+  .carousel-section .container {
+    border-radius: 14px;
+  }
+
+  .carousel-inner {
+    aspect-ratio: 16 / 9;
+  }
+
+  .custom-prev,
+  .custom-next {
+    width: 38px;
+    height: 38px;
+  }
+
+  .custom-prev {
+    left: 4px;
+  }
+
+  .custom-next {
+    right: 4px;
+  }
+}
