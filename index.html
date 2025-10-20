@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMK PARAMITHA JAKARTA</title>
+    <link rel="icon" type="image/png" href="Main Icon/Favicon.jpg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="Main Icon/Favicon.jpg" alt="Logo" />
+          SMK PARAMITHA JAKARTA
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#navModal"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav" id="desktopMenu">
+            <li class="nav-item dropdown me-3">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                TENTANG KAMI
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Fasilitas</a></li>
+                <li><a class="dropdown-item" href="#">Visi & Misi</a></li>
+                <li><a class="dropdown-item" href="#">Galeri Sekolah</a></li>
+                <li>
+                  <a class="dropdown-item" href="sejarah.html"
+                    >Sejarah Singkat</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Motto & Mars</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                JURUSAN
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="#">Rekayasa Perangkat Lunak</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Usaha Layanan Wisata</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Desain Komunikasi Visual</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Kuliner</a></li>
+                <li><a class="dropdown-item" href="#">Perhotelan</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="modal fade" id="navModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="menuCard">
+          <button
+            type="button"
+            class="btn-close"
+            id="closeMenu"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body">
+            <div id="mobileMenu"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>
+          Selamat Datang di <br />
+          SMK PARAMITHA JAKARTA
+        </h1>
+        <p class="hero-subtitle">Membentuk Generasi Unggul dan Siap Kerja!</p>
+      </div>
+    </section>
+
+    <section class="latest-news">
+      <div class="container">
+        <div class="section-header text-center mt-5 mb-4">
+          <h2>Berita Terkini</h2>
+          <p>
+            Berita terbaru seputar kegiatan dan informasi SMK Paramitha Jakarta
+          </p>
+        </div>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="Carousel/Carousel 1.jpg"
+                class="d-block w-100"
+                alt="Slide 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Carousel/Carousel 2.jpg"
+                class="d-block w-100"
+                alt="Slide 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Carousel/Carousel 3.jpg"
+                class="d-block w-100"
+                alt="Slide 3"
+              />
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev custom-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            class="carousel-control-next custom-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <br /><br />
+    <hr
+      style="
+        border: 2px solid #c61717;
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 50%;
+        opacity: 200%;
+      "
+    />
+
+    <section class="school-tour">
+      <div class="section-header text-center mt-5">
+        <h2>Lingkungan Sekolah</h2>
+        <p>Jelajahi fasilitas dan kegiatan di SMK Paramitha Jakarta</p>
+      </div>
+      <div class="video-box">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/AXupa6hEDYk?si=fDELU-9Wj0IFlRKp"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <hr
+      style="
+        border: 2px solid #c61717;
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 50%;
+        opacity: 200%;
+      "
+    />
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="Main Icon/Favicon.jpg" alt="Logo SMK PARAMITHA" />
+          <div class="footer-info">
+            <h3>SMK PARAMITHA JAKARTA</h3>
+            <p>
+              Jl. Raya Kalimalang No. 68 I2, Pondok Kelapa,<br />
+              Duren Sawit, Jakarta Timur, 13450
+            </p>
+            <p>
+              <img src="Icons/ic--baseline-email.png" alt="Email Icon" />
+              surat@paramitha.sch.id
+            </p>
+            <p>
+              <img src="Icons/material-symbols--call.png" alt="Telp Icon" />
+              0123456789
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <h4>Ikuti Kami</h4>
+          <a href="https://www.youtube.com/@smkparamithajakartaofficia2707/videos"
+            ><img src="Icons/mdi--youtube.png" alt="YouTube" /> SMK PARAMITHA
+            JAKARTA Official</a
+          >
+          <a href="https://www.instagram.com/osparthaa/"
+            ><img src="Icons/mdi--instagram.png" alt="Instagram" />
+            @osparthaa</a
+          >
+          <a href="#"
+            ><img src="Icons/mdi--web.png" alt="Website" />
+            http://paramitha.sch.id</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2025 <strong>SMK PARAMITHA JAKARTA</strong> - All Rights Reserved.
+        </p>
+        <div class="footer-social-mobile">
+          <a href="#"><img src="Icons/mdi--youtube.png" alt="YouTube" /></a>
+          <a href="#"><img src="Icons/mdi--instagram.png" alt="Instagram" /></a>
+          <a href="#"><img src="Icons/mdi--web.png" alt="Website" /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="navbar.js"></script>
+    <script src="carousel.js"></script>
+  </body>
+</html>
