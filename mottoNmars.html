@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="sejarah.css" />
+    <link rel="stylesheet" href="mottoNmars.css" />
   </head>
 
   <body>
@@ -109,118 +109,69 @@
       </div>
     </div>
 
-    <header class="sejarah-header">
+    <section class="motto-mars py-5">
       <div class="container">
-        <div class="section-title">SEJARAH SINGKAT</div>
-        <p class="section-sub">
-          Berdiri sejak 1989 di bawah naungan Yayasan Kolese Dharma Paramitha,
-          beralamat di Jl. Raya Kalimalang No. 68, Pondok Kelapa, Duren Sawit,
-          Jakarta Timur.
-        </p>
-      </div>
-    </header>
+        <h2 class="motto-title text-center" data-aos="fade-up">
+          MOTTO & MARS SMK PARAMITHA
+        </h2>
 
-    <!-- TIMELINE -->
-    <main class="py-5">
-      <div class="container">
-        <div class="timeline" aria-label="Timeline Sejarah SMK Paramitha">
-          <!-- 1989 -->
-          <div
-            class="timeline-item left"
-            data-aos="fade-right"
-            data-aos-duration="700"
-          >
-            <div class="timeline-content">
-              <h4>1989</h4>
-              <p>
-                Pendirian sekolah dengan nama awal
-                <strong>SMIP Paramitha</strong>.
-              </p>
-            </div>
+        <!-- Motto -->
+        <div
+          class="motto-box d-flex align-items-center justify-content-between"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <div>
+            <h4 class="fw-bold mb-2">Motto</h4>
+            <p class="fw-bold mb-1">PINK JITU</p>
+            <p class="text-secondary mb-0">
+              Profesional Inovatif Nasionalis Kompeten
+            </p>
+            <p class="text-secondary mb-0">Jujur Iman Tangguh Unggul</p>
           </div>
+          <img src="Main Icon/Favicon.jpg" alt="Logo SMK" class="motto-logo" />
+        </div>
 
-          <!-- 1990 -->
-          <div
-            class="timeline-item right"
-            data-aos="fade-left"
-            data-aos-duration="700"
-          >
-            <div class="timeline-content">
-              <h4>Januari 1990</h4>
-              <p>
-                SMIP Paramitha memperoleh status "disamakan" dan mulai
-                menyelenggarakan program EBTA untuk sekolah lain.
-              </p>
-            </div>
-          </div>
-
-          <!-- 1995 -->
-          <div
-            class="timeline-item left"
-            data-aos="fade-right"
-            data-aos-duration="700"
-          >
-            <div class="timeline-content">
-              <h4>1995</h4>
-              <p>
-                Resmi bertransformasi menjadi <strong>SMK Paramitha</strong> dan
-                memperoleh legalitas operasional penuh (SK/izin operasional).
-              </p>
-            </div>
-          </div>
-
-          <!-- 2000 -->
-          <div
-            class="timeline-item right"
-            data-aos="fade-left"
-            data-aos-duration="700"
-          >
-            <div class="timeline-content">
-              <h4>Awal 2000-an</h4>
-              <p>
-                Pengembangan jurusan: menambah program
-                <strong
-                  >Perhotelan, Pariwisata, Tata Boga, dan Multimedia</strong
-                >
-                untuk menyesuaikan kebutuhan industri.
-              </p>
-            </div>
-          </div>
-
-          <!-- 2010 -->
-          <div
-            class="timeline-item left"
-            data-aos="fade-up"
-            data-aos-duration="700"
-          >
-            <div class="timeline-content">
-              <h4>2010-an</h4>
-              <p>
-                Peningkatan fasilitas praktik (laboratorium multimedia, kitchen,
-                front office) dan penguatan kerjasama link & match dengan
-                industri.
-              </p>
-            </div>
-          </div>
-
-          <!-- 2020 -->
-          <div
-            class="timeline-item right"
-            data-aos="fade-up"
-            data-aos-duration="700"
-          >
-            <div class="timeline-content">
-              <h4>2020 – Sekarang</h4>
-              <p>
-                Memperkuat branding sebagai <strong>SMK Unggul</strong>, fokus
-                pada lulusan siap kerja, adaptasi teknologi pendidikan, dan
-                peningkatan kualitas vokasi.
-              </p>
-            </div>
-          </div>
+        <!-- Mars -->
+        <div
+          class="mars-box text-center"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          <h4 class="fw-bold mb-3">Mars SMK PARAMITHA</h4>
+          <pre id="marsText" class="mars-text typing"></pre>
         </div>
       </div>
-    </main>
+    </section>
+
+    <script>
+      const marsLyrics = `Kami Para Putra-Putri Siswa Paramitha
+Pewaris Penerus Cita Pembangunan Negara
+Kami Semua Berusaha Tuk Mencapai Cita-Cita
+Giat Belajar Bekerja Berjuang Bersama Gembira
+
+Sekolah Menengah Industri Pariwisata
+Serta Teknologi Informatika
+Dibina Dididik Jiwa Raganya
+Agar Berguna Tuk Nusa Bangsa
+
+Dunia Usaha Kita Memanggil Kita Semua
+Marilah Giat Belajar
+Jayalah Paramitha Kita
+Marilah Giat Belajar
+Jayalah Paramitha Kita`;
+
+      let i = 0;
+      function typeWriter() {
+        if (i < marsLyrics.length) {
+          document.getElementById("marsText").textContent +=
+            marsLyrics.charAt(i);
+          i++;
+          setTimeout(typeWriter, 40);
+        }
+      }
+      typeWriter();
+    </script>
 
     <hr
       style="
@@ -312,12 +263,9 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        once: true,
-        offset: 120,
-        duration: 700,
-      });
+      AOS.init({ once: true, duration: 700, offset: 100 });
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="navbar.js"></script>
     <script src="carousel.js"></script>
