@@ -19,18 +19,30 @@
   margin-bottom: 25px;
 }
 
+/* === VIDEO RESPONSIVE UNIVERSAL === */
 .video-box {
-  max-width: 900px;
+  position: relative;
+  width: 100%;
+  max-width: 880px; 
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
 }
 
-.video-box iframe {
-  width: 100%;
-  height: 450px;
+/* Biar selalu 16:9 */
+.video-box::before {
+  content: "";
   display: block;
+  padding-bottom: 56.25%; 
+}
+
+.video-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
   border: none;
 }
 
