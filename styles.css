@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
+  color: #1A2254;
   text-align: center;
   overflow: hidden;
   padding: 0 20px;
@@ -129,7 +129,7 @@
 .latest-news .section-header h2 {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #8b0010;
+  color: #1A2254;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
@@ -142,7 +142,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #8b0010, #b02a37);
+  background: linear-gradient(90deg, #1A2254, #1A2254);
   margin: 8px auto 0;
   border-radius: 2px;
 }
@@ -165,7 +165,7 @@
 .school-tour .section-header h2 {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #8b0010;
+  color: #1A2254;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
@@ -178,7 +178,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #8b0010, #b02a37);
+  background: linear-gradient(90deg, #1A2254, #1A2254);
   margin: 10px auto 0;
   border-radius: 2px;
 }

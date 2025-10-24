@@ -53,14 +53,20 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="#">Fasilitas</a></li>
-                <li><a class="dropdown-item" href="#">Visi & Misi</a></li>
+                <li>
+                  <a class="dropdown-item" href="visimisi.html">Visi & Misi</a>
+                </li>
                 <li><a class="dropdown-item" href="#">Galeri Sekolah</a></li>
                 <li>
                   <a class="dropdown-item" href="sejarah.html"
                     >Sejarah Singkat</a
                   >
                 </li>
-                <li><a class="dropdown-item" href="mottonmars.html">Motto & Mars</a></li>
+                <li>
+                  <a class="dropdown-item" href="mottonmars.html"
+                    >Motto & Mars</a
+                  >
+                </li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -109,12 +115,29 @@
       </div>
     </div>
 
-    <section class="motto-mars py-5">
-      <div class="container">
-        <h2 class="motto-title text-center" data-aos="fade-up">
-          MOTTO & MARS SMK PARAMITHA
-        </h2>
+    <div class="modal fade" id="navModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="menuCard">
+          <button
+            type="button"
+            class="btn-close"
+            id="closeMenu"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body">
+            <div id="mobileMenu"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+        <div class="header-box">
+        <h1>MOTTO & MARS</h1>
+       </div>
+
+    <section class="visi-misi fade-in">
+    <section class="motto-mars py-5">
         <!-- Motto -->
         <div
           class="motto-box d-flex align-items-center justify-content-between"
