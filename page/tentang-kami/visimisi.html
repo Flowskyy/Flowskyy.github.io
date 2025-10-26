@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMK PARAMITHA JAKARTA</title>
+    <link rel="icon" type="image/png" href="/assets/img/Main Icon/Favicon.jpg"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+    
+    <div class="header-box">
+      <h1>VISI & MISI</h1>
+    </div>
+
+    <section class="visi-misi fade-in">
+      <div class="content-box">
+        <h2>Visi</h2>
+        <p>
+          “Menjadi sekolah kejuruan unggul yang menghasilkan lulusan
+          berkarakter, berkompeten, dan siap bersaing di era digital.”
+        </p>
+
+        <h2>Misi</h2>
+        <ul>
+          <li>Meningkatkan kualitas pembelajaran berbasis teknologi.</li>
+          <li>Menumbuhkan sikap disiplin, tanggung jawab, dan etika kerja.</li>
+          <li>Menjalin kerja sama dengan dunia industri dan perguruan tinggi.</li>
+          <li>Mengembangkan kreativitas dan inovasi peserta didik.</li>
+          <li>Membentuk generasi unggul yang berdaya saing global.</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr
+      style="
+        border: 2px solid #c61717;
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 50%;
+        opacity: 200%;
+      "
+    />
+
+    <div id="footer"></div>
+
+    <!-- =========================================================
+         LOAD HEADER & FOOTER
+    ========================================================= -->
+    <script src="../../assets/js/navbar.js"></script>
+    <script>
+      Promise.all([
+        fetch("../../assets/components/header.html").then(res => res.text()),
+        fetch("../../assets/components/footer.html").then(res => res.text())
+      ])
+      .then(([header, footer]) => {
+        document.getElementById("header").innerHTML = header;
+        document.getElementById("footer").innerHTML = footer;
+        if (typeof initMobileMenu === "function") initMobileMenu();
+      })
+      .catch(err => console.error("Gagal memuat header/footer:", err));
+    </script>
+
+    <!-- =========================================================
+         BOOTSTRAP JS
+    ========================================================= -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

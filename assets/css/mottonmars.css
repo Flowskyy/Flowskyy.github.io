@@ -1,24 +1,19 @@
+
+
 /* ===== Section Motto & Mars ===== */
 .motto-mars {
   background: white;
   font-family: "Plus Jakarta Sans", sans-serif;
   padding: 50px 20px;
+  color: #121d45;
 }
 
-/* ==== HEADER BOX ==== */
-.header-box {
-  background: #960019;
-  color: #fff;
-  text-align: left;
-  margin-top: 5vh;
-  padding: 20px 40px;
-}
-
-.header-box h1 {
-  font-size: 1.6rem;
+.motto-mars h4 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 10px 0px;
   font-weight: 700;
-  margin-left: -2%;
-  letter-spacing: 0.5px;
+  font-size: 30px;
+  color: #121d45;
 }
 
 /* Glass Card */
@@ -46,6 +41,7 @@
 /* Text */
 .motto-text-wrapper {
   flex: 1;
+  color: aqua;
 }
 
 .motto-text-wrapper h3 {
@@ -88,7 +84,6 @@
 .mars-text {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #000000;
   white-space: pre-line;
   text-align: left;
   max-width: 750px;

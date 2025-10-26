@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMK PARAMITHA JAKARTA</title>
+    <link rel="icon" type="image/png" href="/assets/img/Main Icon/Favicon.jpg"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+        <div class="header-box">
+        <h1>MOTTO & MARS</h1>
+       </div>
+    <section class="motto-mars py-5">
+        <!-- Motto -->
+        <div
+          class="motto-box d-flex align-items-center justify-content-between"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <div>
+            <h4 class="">MOTTO</h4>
+            <p class="fw-bold mb-1">PINK JITU</p>
+            <p class="text-secondary mb-0">
+              Profesional Inovatif Nasionalis Kompeten
+            </p>
+            <p class="text-secondary mb-0">Jujur Iman Tangguh Unggul</p>
+          </div>
+          <img src="/assets/img/Main Icon/Favicon.jpg" alt="Logo SMK" class="motto-logo" />
+        </div>
+
+        <!-- Mars -->
+        <div
+          class="mars-box text-center"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          <h4 class="fw-bold mb-3">MARS SMK PARAMITHA</h4>
+          <pre id="marsText" class="mars-text typing"></pre>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const marsLyrics = `Kami Para Putra-Putri Siswa Paramitha
+Pewaris Penerus Cita Pembangunan Negara
+Kami Semua Berusaha Tuk Mencapai Cita-Cita
+Giat Belajar Bekerja Berjuang Bersama Gembira
+
+Sekolah Menengah Industri Pariwisata
+Serta Teknologi Informatika
+Dibina Dididik Jiwa Raganya
+Agar Berguna Tuk Nusa Bangsa
+
+Dunia Usaha Kita Memanggil Kita Semua
+Marilah Giat Belajar
+Jayalah Paramitha Kita
+Marilah Giat Belajar
+Jayalah Paramitha Kita`;
+
+      let i = 0;
+      function typeWriter() {
+        if (i < marsLyrics.length) {
+          document.getElementById("marsText").textContent +=
+            marsLyrics.charAt(i);
+          i++;
+          setTimeout(typeWriter, 40);
+        }
+      }
+      typeWriter();
+    </script>
+    
+   <hr
+      style="
+        border: 2px solid #c61717;
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 50%;
+        opacity: 200%;
+      "
+    />
+
+    <div id="footer"></div>
+
+    <!-- =========================================================
+         LOAD HEADER & FOOTER
+    ========================================================= -->
+    <script src="../../assets/js/navbar.js"></script>
+    <script>
+      Promise.all([
+        fetch("../../assets/components/header.html").then((res) => res.text()),
+        fetch("../../assets/components/footer.html").then((res) => res.text()),
+      ])
+        .then(([header, footer]) => {
+          document.getElementById("header").innerHTML = header;
+          document.getElementById("footer").innerHTML = footer;
+          if (typeof initMobileMenu === "function") initMobileMenu();
+        })
+        .catch((err) => console.error("Gagal memuat header/footer:", err));
+    </script>
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 700, offset: 100 });
+    </script>
+    <!-- =========================================================
+         BOOTSTRAP JS
+    ========================================================= -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,666 @@
+/* =========================================================
+   File: assets/css/header.css
+   Description: Global & Header Stylesheet
+   Author: Team SMK Paramitha Jakarta Web Project
+   ========================================================= */
+
+
+/* =========================================================
+   IMPORT SECTION
+   ========================================================= */
+@import url("footer.css");
+@import url("fasilitas.css");
+@import url("mottonmars.css");
+@import url("sejarah.css");
+@import url("visimisi.css");
+@import url("styles.css");
+
+
+
+/* =========================================================
+   FONT IMPORTS
+   ========================================================= */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-BoldItalic.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-LightItalic.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-ExtraBoldItalic.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-ExtraBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-ExtraLightItalic.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-ExtraLightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-Light.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-ExtraLight.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-Italic.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-Medium.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-MediumItalic.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-SemiBoldItalic.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-SemiBold.woff2') format('woff2'),
+       url('../assets/fonts/PlusJakartaSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+/* =========================================================
+   GLOBAL STYLE
+   ========================================================= */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+
+
+/* =========================================================
+   NAVBAR STYLE
+   ========================================================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 24px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  flex-wrap: nowrap;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+  animation: fadeDown 0.6s ease forwards;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+
+
+/* =========================================================
+   BRAND & TOGGLER
+   ========================================================= */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: -4px;
+}
+
+.navbar-brand img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.navbar-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 4px;
+  height: 38px;
+  margin-right: -4px;
+}
+
+
+
+/* =========================================================
+   DESKTOP MENU
+   ========================================================= */
+.navbar-nav .nav-link {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #111;
+  padding: 8px 14px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd;
+}
+
+.dropdown-menu {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #222;
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  color: #0d6efd;
+  background-color: #f4f8ff;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+#navModal .modal-dialog {
+  margin: 0;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menuCard {
+  width: 90%;
+  max-width: 380px;
+  height: 85vh;
+  margin: auto;
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-backdrop.show {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#menuCard .modal-body {
+  overflow-y: auto;
+  height: 100%;
+  padding: 20px 15px;
+}
+
+#menuCard .modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+#menuCard .modal-body::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+#mobileMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#mobileMenu .nav-item {
+  margin-bottom: -5px;
+}
+
+#mobileMenu .nav-link,
+#mobileMenu .dropdown-toggle {
+  width: 100%;
+  display: block;
+  text-align: left;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.25s ease;
+  padding: 8px 0;
+}
+
+#mobileMenu .nav-link:hover,
+#mobileMenu .dropdown-toggle:hover {
+  color: #0d6efd;
+}
+
+#mobileMenu .dropdown-menu {
+  display: none;
+  padding-left: 12px;
+  margin-top: 6px;
+  animation: slideDown 0.3s ease forwards;
+  margin-bottom: 10px;
+}
+
+#mobileMenu .dropdown-item {
+  display: block;
+  font-size: 15px;
+  padding: 6px 0;
+  color: #555;
+  transition: color 0.25s ease;
+}
+
+#mobileMenu .dropdown-item:hover {
+  color: #0d6efd;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 6px 14px;
+  }
+
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .navbar-brand img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #menuCard {
+    max-width: 92%;
+    padding: 12px 14px;
+  }
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   File: assets/css/global.css
+   Description: School Tour & Footer Stylesheet
+   Author: Team SMK Paramitha Jakarta Web Project
+   ========================================================= */
+
+
+/* =========================================================
+   FONT & RESET
+   ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+/* =========================================================
+   SCHOOL TOUR SECTION
+   ========================================================= */
+.school-tour {
+  background: #fff;
+  text-align: center;
+  padding: 60px 20px 50px;
+}
+
+.school-tour h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1A2254;
+  margin-bottom: 25px;
+}
+
+/* === UNIVERSAL RESPONSIVE VIDEO === */
+.video-box {
+  position: relative;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Maintain 16:9 ratio */
+.video-box::before {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.video-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+  border: none;
+}
+
+
+/* =========================================================
+   FOOTER SECTION
+   ========================================================= */
+.footer {
+  background: #ffffff;
+  color: #000;
+  padding: 50px 40px 30px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #f1f7fd;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0;
+  padding: 20px 40px;
+  gap: 40px;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0);
+}
+
+/* === LEFT SIDE: LOGO + INFO === */
+.footer-left {
+  margin-left: 5%;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.footer-left img {
+  width: 140px;
+  height: auto;
+}
+
+.footer-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-info p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-info img {
+  width: 18px;
+  height: 18px;
+}
+
+/* === RIGHT SIDE: SOCIAL (DESKTOP) === */
+.footer-right h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.footer-right a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.footer-right a:hover {
+  transform: translateX(5px);
+}
+
+.footer-right img {
+  width: 20px;
+  height: 20px;
+}
+
+/* === COPYRIGHT === */
+.footer-bottom {
+  border-top: 1px solid #dce3ea;
+  margin-top: 40px;
+  padding-top: 15px;
+  max-width: 1200px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* === SOCIAL (MOBILE) === */
+.footer-social-mobile {
+  display: none;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-mobile a img {
+  width: 22px;
+  transition: 0.3s;
+}
+
+.footer-social-mobile a img:hover {
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+@media (max-width: 992px) {
+  .video-box iframe {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-box iframe {
+    height: 220px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-info h3 {
+    margin-top: 5px;
+  }
+
+  .footer-right {
+    display: none;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .footer-social-mobile {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .school-tour h2 {
+    font-size: 22px;
+  }
+
+  .video-box iframe {
+    height: 180px;
+  }
+}
+
+
+/* === HEADER BOX === */
+.header-box {
+  background: var(--navy);
+  color: #fff;
+  text-align: left;
+  margin-top: 5vh;
+  padding: 20px 40px;
+  animation: fadeSlideUp 1.2s ease forwards;
+}
+.header-box h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-left: -2%;
+  letter-spacing: 0.5px;
+}
+
+/* === SCROLL FADE-IN === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === ANIMATION KEYFRAMES === */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMK PARAMITHA JAKARTA</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/img/Main Icon/Favicon.jpg"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <div class="header-box">
+      <h1>SEJARAH</h1>
+    </div>
+
+    <p class="section-sub fade-in">
+      Berdiri sejak 1989 di bawah naungan Yayasan Kolese Dharma Paramitha,
+      beralamat di Jl. Raya Kalimalang No. 68, Pondok Kelapa, Duren Sawit,
+      Jakarta Timur.
+    </p>
+
+    <main class="py-5">
+      <div class="container">
+        <div class="timeline" aria-label="Timeline Sejarah SMK Paramitha">
+          <!-- 1989 -->
+          <div
+            class="timeline-item left"
+            data-aos="fade-right"
+            data-aos-duration="700"
+          >
+            <div class="timeline-content">
+              <h4>1989</h4>
+              <p>
+                Pendirian sekolah dengan nama awal
+                <strong>SMIP Paramitha</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- 1990 -->
+          <div
+            class="timeline-item right"
+            data-aos="fade-left"
+            data-aos-duration="700"
+          >
+            <div class="timeline-content">
+              <h4>Januari 1990</h4>
+              <p>
+                SMIP Paramitha memperoleh status "disamakan" dan mulai
+                menyelenggarakan program EBTA untuk sekolah lain.
+              </p>
+            </div>
+          </div>
+
+          <!-- 1995 -->
+          <div
+            class="timeline-item left"
+            data-aos="fade-right"
+            data-aos-duration="700"
+          >
+            <div class="timeline-content">
+              <h4>1995</h4>
+              <p>
+                Resmi bertransformasi menjadi <strong>SMK Paramitha</strong> dan
+                memperoleh legalitas operasional penuh (SK/izin operasional).
+              </p>
+            </div>
+          </div>
+
+          <!-- 2000 -->
+          <div
+            class="timeline-item right"
+            data-aos="fade-left"
+            data-aos-duration="700"
+          >
+            <div class="timeline-content">
+              <h4>Awal 2000-an</h4>
+              <p>
+                Pengembangan jurusan: menambah program
+                <strong
+                  >Perhotelan, Pariwisata, Tata Boga, dan Multimedia</strong
+                >
+                untuk menyesuaikan kebutuhan industri.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2010 -->
+          <div
+            class="timeline-item left"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <div class="timeline-content">
+              <h4>2010-an</h4>
+              <p>
+                Peningkatan fasilitas praktik (laboratorium multimedia, kitchen,
+                front office) dan penguatan kerjasama link & match dengan
+                industri.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2020 -->
+          <div
+            class="timeline-item right"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <div class="timeline-content">
+              <h4>2020 – Sekarang</h4>
+              <p>
+                Memperkuat branding sebagai <strong>SMK Unggul</strong>, fokus
+                pada lulusan siap kerja, adaptasi teknologi pendidikan, dan
+                peningkatan kualitas vokasi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <hr
+      style="
+        border: 2px solid #c61717;
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 50%;
+        opacity: 200%;
+      "
+    />
+
+    <div id="footer"></div>
+
+    <!-- =========================================================
+         LOAD HEADER & FOOTER
+    ========================================================= -->
+    <script src="../../assets/js/navbar.js"></script>
+    <script>
+      Promise.all([
+        fetch("../../assets/components/header.html").then((res) => res.text()),
+        fetch("../../assets/components/footer.html").then((res) => res.text()),
+      ])
+        .then(([header, footer]) => {
+          document.getElementById("header").innerHTML = header;
+          document.getElementById("footer").innerHTML = footer;
+          if (typeof initMobileMenu === "function") initMobileMenu();
+        })
+        .catch((err) => console.error("Gagal memuat header/footer:", err));
+    </script>
+
+    <script>
+      document.addEventListener("scroll", () => {
+        document.querySelectorAll(".fade-in, .timeline-item").forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) el.classList.add("visible");
+        });
+      });
+    </script>
+
+    <!-- =========================================================
+         BOOTSTRAP JS
+    ========================================================= -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

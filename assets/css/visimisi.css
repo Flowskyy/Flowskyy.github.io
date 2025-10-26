@@ -22,21 +22,6 @@ body {
   animation: fadeSlideUp 1.2s ease forwards;
 }
 
-/* ==== HEADER BOX ==== */
-.header-box {
-  background: #960019;
-  color: #fff;
-  text-align: left;
-  margin-top: 5vh;
-  padding: 20px 40px;
-}
-
-.header-box h1 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-left: -2%;
-  letter-spacing: 0.5px;
-}
 
 /* ==== CONTENT BOX ==== */
 .content-box {
