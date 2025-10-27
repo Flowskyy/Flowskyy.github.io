@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMK PARAMITHA JAKARTA</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/img/Main Icon/Favicon.jpg"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+  </head>
+
+  <body class="fade-in">
+    <div id="header"></div>
+    <div class="header-box">
+      <h1>PERHOTELAN</h1>
+    </div>
+
+      <div class="content-box">
+        <section class="carousel">
+          <div class="container">
+            <div class="section-header text-center mt-5 mb-4">
+              <h2>Perhotelan</h2>
+              <p>
+                “Perhotelan: Siap jadi profesional hospitality & manajemen hotel!”
+              </p>
+            </div>
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="assets/img/carousel/Carousel 1.jpg"
+                    class="d-block w-100"
+                    alt="Slide 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/img/carousel/Carousel 2.jpg"
+                    class="d-block w-100"
+                    alt="Slide 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/img/carousel/Carousel 3.jpg"
+                    class="d-block w-100"
+                    alt="Slide 3"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev custom-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+
+              <button
+                class="carousel-control-next custom-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <br> <br>
+        <h2>Jurusan Perhotelan</h2>
+        <p>
+         Jurusan Perhotelan di SMK mempersiapkan siswa untuk menjadi ahli dalam manajemen hotel dan layanan tamu profesional. Siswa belajar operasional hotel, front office, housekeeping, food & beverage, dan layanan pelanggan. Jurusan ini cocok bagi yang suka melayani orang, tertarik industri hospitality, dan ingin berkarier sebagai hotelier, receptionist, housekeeper, atau melanjutkan pendidikan di bidang hospitality dan manajemen perhotelan.
+      </div>
+
+    <div class="fade-in" id="footer"></div>
+
+    <!-- =========================================================
+         LOAD HEADER & FOOTER
+    ========================================================= -->
+    <script src="../../assets/js/navbar.js"></script>
+    <script>
+      Promise.all([
+        fetch("../../assets/components/header.html").then((res) => res.text()),
+        fetch("../../assets/components/footer.html").then((res) => res.text()),
+      ])
+        .then(([header, footer]) => {
+          document.getElementById("header").innerHTML = header;
+          document.getElementById("footer").innerHTML = footer;
+          if (typeof initMobileMenu === "function") initMobileMenu();
+        })
+        .catch((err) => console.error("Gagal memuat header/footer:", err));
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 700, offset: 100 });
+    </script>
+    <!-- =========================================================
+         BOOTSTRAP JS
+    ========================================================= -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

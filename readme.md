@@ -63,7 +63,7 @@ PARAMITHASCHOOLPROJECT/
 │  │  └─ animation.js
 │  ├─ img/
 │  │  ├─ logo/
-│  │  ├─ hero/
+│  │  ├─ carousel/
 │  │  └─ gallery/
 │  └─ fonts/
 └─ README.md
