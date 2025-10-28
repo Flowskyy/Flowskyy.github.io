@@ -120,116 +120,12 @@
   }
 }
 
-/* ==== CAROUSEL SECTION ==== */
-.carousel .section-header {
-  text-align: center;
-  margin: 50px 0 30px;
-}
-
-.carousel .section-header h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #1A2254;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding-bottom: 8px;
-  position: relative;
-}
-
-.carousel .section-header h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #1A2254, #1A2254);
-  margin: 8px auto 0;
-  border-radius: 2px;
-}
-
-.carousel .section-header p {
-  font-size: 1rem;
-  color: #333;
-  margin-top: 8px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ==== LINGKUNGAN SEKOLAH SECTION ==== */
-.school-tour .section-header {
-  margin: 70px 0 40px;
-  margin-top: -3% !important;
-}
-
-.school-tour .section-header h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #1A2254;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding-bottom: 8px;
-  position: relative;
-}
-
-.school-tour .section-header h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #1A2254, #1A2254);
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-.school-tour .section-header p {
-  font-size: 1rem;
-  color: #333;
-  margin-top: 4px;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ==== RESPONSIVE ==== */
-@media (max-width: 768px) {
-  .latest-news .section-header h2,
-  .school-tour .section-header h2 {
-    font-size: 1.8rem;
-  }
-  
-  .school-tour{
-    margin-top: -1%;
-  }
-
-  .section-header h1 {
-    margin-top: -2%;
-  }
-
-  .latest-news .section-header p,
-  .school-tour .section-header p {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .latest-news .section-header h2,
-  .school-tour .section-header h2 {
-    font-size: 1.6rem;
-  }
-
-  .latest-news .section-header p,
-  .school-tour .section-header p {
-    font-size: 0.9rem;
-  }
-}
 
 /* ==== SECTION CAROUSEL ==== */
-.carousel-section {
+.carousel {
   width: 100%;
   background: #ffffff;
-  padding: 50px 0;
+    margin-bottom: 10%;
 }
 
 .carousel-section .container {

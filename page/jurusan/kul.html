@@ -125,10 +125,10 @@
 
     <div class="fade-in" id="footer"></div>
 
-    <!-- =========================================================
-         LOAD HEADER & FOOTER
-    ========================================================= -->
-    <script src="../../assets/js/navbar.js"></script>
+     <!-- =========================================================
+     LOAD HEADER & FOOTER
+  ========================================================= -->
+    <script src="/assets/js/navbar.js"></script>
     <script>
       Promise.all([
         fetch("../../assets/components/header.html").then((res) => res.text()),
@@ -137,7 +137,11 @@
         .then(([header, footer]) => {
           document.getElementById("header").innerHTML = header;
           document.getElementById("footer").innerHTML = footer;
+
           if (typeof initMobileMenu === "function") initMobileMenu();
+
+          // panggil animasi footer yg udah didefinisiin di navbar.js
+          if (typeof initFooterAnimation === "function") initFooterAnimation();
         })
         .catch((err) => console.error("Gagal memuat header/footer:", err));
     </script>

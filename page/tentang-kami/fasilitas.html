@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SMK PARAMITHA JAKARTA</title>
-    <link rel="icon" type="image/png" href="/assets/img/Main Icon/Favicon.jpg"/>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/img/Main Icon/Favicon.jpg"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,12 +31,12 @@
     <h1 class="segera-header fade-in">Segera Hadir...</h1>
     <br /><br /><br /><br />
 
-     <div id="footer"></div>
+    <div id="footer"></div>
 
     <!-- =========================================================
-         LOAD HEADER & FOOTER
-    ========================================================= -->
-    <script src="../../assets/js/navbar.js"></script>
+     LOAD HEADER & FOOTER
+  ========================================================= -->
+    <script src="/assets/js/navbar.js"></script>
     <script>
       Promise.all([
         fetch("../../assets/components/header.html").then((res) => res.text()),
@@ -41,12 +45,16 @@
         .then(([header, footer]) => {
           document.getElementById("header").innerHTML = header;
           document.getElementById("footer").innerHTML = footer;
+
           if (typeof initMobileMenu === "function") initMobileMenu();
+
+          // panggil animasi footer yg udah didefinisiin di navbar.js
+          if (typeof initFooterAnimation === "function") initFooterAnimation();
         })
         .catch((err) => console.error("Gagal memuat header/footer:", err));
     </script>
 
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({ once: true, duration: 700, offset: 100 });
     </script>
