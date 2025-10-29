@@ -3,7 +3,8 @@
 // =========================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("[UPDATE 013] Memulai inisialisasi navbar dan footer...");
+  console.log("[UPDATE 0.13.01] Memulai inisialisasi navbar dan footer...");
+
   const checkHeaderLoaded = setInterval(() => {
     const header = document.getElementById("header");
     const desktopMenu = document.getElementById("desktopMenu");
@@ -11,32 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (header && desktopMenu && mobileMenu) {
       clearInterval(checkHeaderLoaded);
-      console.log("[INFO] Header dan menu ditemukan. Memulai inisialisasi.");
-
-      // ===== Tentukan path ke root dengan if-else =====
-      let pathToRoot;
-      const pathDepth = window.location.pathname.split("/").length;
-
-      if (pathDepth > 3) {
-        pathToRoot = "../../";
-        console.log(
-          "[INFO] Halaman berada di folder dalam. Path ke root:",
-          pathToRoot
-        );
-      } else if (pathDepth <= 3) {
-        pathToRoot = "./";
-        console.log(
-          "[INFO] Halaman berada di root atau folder utama. Path ke root:",
-          pathToRoot
-        );
-      } else {
-        console.log(
-          "[ERROR] Path halaman tidak dapat ditentukan secara otomatis."
-        );
-        pathToRoot = "./";
-      }
-
-      console.log("[INFO] Lokasi halaman saat ini:", window.location.pathname);
+      console.log("[INFO] Header dan menu ditemukan.");
 
       // ===== Tambahkan link "BERANDA" di menu mobile =====
       const berandaLi = document.createElement("li");
@@ -44,25 +20,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const berandaLink = document.createElement("a");
       berandaLink.classList.add("nav-link");
-      berandaLink.href = `${pathToRoot}index.html`;
+      berandaLink.href = "/index.html"; // pakai absolute path
       berandaLink.textContent = "BERANDA";
 
       berandaLi.appendChild(berandaLink);
       mobileMenu.appendChild(berandaLi);
-
-      console.log(
-        "[INFO] Link 'BERANDA' berhasil ditambahkan ke menu mobile:",
-        berandaLink.href
-      );
+      console.log("[INFO] Link 'BERANDA' berhasil ditambahkan ke menu mobile.");
 
       // ===== Clone semua dropdown dari menu desktop ke mobile =====
-      desktopMenu.querySelectorAll(".nav-item.dropdown").forEach((item) => {
-        const title =
-          item.querySelector(".nav-link.dropdown-toggle")?.innerText.trim() ||
-          "";
-        const submenuItems = item.querySelectorAll(
-          ".dropdown-menu .dropdown-item"
-        );
+      const dropdownItems = desktopMenu.querySelectorAll(".nav-item.dropdown");
+      if (!dropdownItems.length) {
+        console.log("[INFO] Tidak ada dropdown di menu desktop.");
+      }
+
+      dropdownItems.forEach((item) => {
+        const titleEl = item.querySelector(".nav-link.dropdown-toggle");
+        const title = titleEl ? titleEl.innerText.trim() : "";
+        const submenuItems = item.querySelectorAll(".dropdown-menu .dropdown-item");
 
         const li = document.createElement("li");
         li.classList.add("nav-item", "dropdown");
@@ -76,9 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         submenuItems.forEach((sub) => {
           const a = document.createElement("a");
-          a.href = sub.getAttribute("href");
+          a.href = sub?.getAttribute("href") || "#";
           a.classList.add("dropdown-item");
-          a.textContent = sub.textContent;
+          a.textContent = sub ? sub.textContent : "";
           ul.appendChild(a);
         });
 
@@ -95,12 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("[INFO] Semua dropdown berhasil dicloning ke menu mobile.");
 
       // ===== Jalankan animasi slide-down untuk navbar =====
-      initNavbarSlideDown(header);
-      console.log("[INFO] Animasi slide-down navbar telah diinisialisasi.");
+      if (typeof initNavbarSlideDown === "function") {
+        initNavbarSlideDown(header);
+        console.log("[INFO] Animasi slide-down navbar diinisialisasi.");
+      }
     } else {
-      console.log(
-        "[WARN] Header, desktopMenu, atau mobileMenu belum tersedia. Menunggu elemen dimuat..."
-      );
+      console.log("[WARN] Header, desktopMenu, atau mobileMenu belum tersedia.");
     }
   }, 300);
 });
@@ -111,15 +85,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function initFooterAnimation() {
   setTimeout(() => {
     const footerCards = document.querySelectorAll(".slide-left, .slide-right");
-    if (!footerCards.length) {
-      console.log("[INFO] Tidak ada elemen footer untuk dianimasikan.");
-      return;
-    }
-
-    console.log("[INFO] Memulai animasi footer...");
+    if (!footerCards.length) return;
 
     const observer = new IntersectionObserver(
-      (entries, observer) => {
+      (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
@@ -131,6 +100,6 @@ function initFooterAnimation() {
     );
 
     footerCards.forEach((el) => observer.observe(el));
-    console.log("[INFO] Observer footer telah diinisialisasi.");
+    console.log("[INFO] Observer footer diinisialisasi.");
   }, 500);
 }
