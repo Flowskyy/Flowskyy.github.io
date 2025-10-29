@@ -15,16 +15,29 @@ document.addEventListener("DOMContentLoaded", () => {
       clearInterval(checkHeaderLoaded);
 
       // ===== Tambahkan link "Beranda" di menu mobile =====
-      mobileMenu.innerHTML = `
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">BERANDA</a>
-        </li>
-      `;
+      // Tentukan path ke root otomatis 
+      const pathToRoot =
+        window.location.pathname.split("/").length > 3 ? "../../" : "./";
+
+      const berandaLi = document.createElement("li");
+      berandaLi.classList.add("nav-item");
+
+      const berandaLink = document.createElement("a");
+      berandaLink.classList.add("nav-link");
+      berandaLink.href = `${pathToRoot}index.html`;
+      berandaLink.textContent = "BERANDA";
+
+      berandaLi.appendChild(berandaLink);
+      mobileMenu.appendChild(berandaLi);
 
       // ===== Clone semua dropdown dari menu desktop ke mobile =====
-      desktopMenu.querySelectorAll(".nav-item.dropdown").forEach(item => {
-        const title = item.querySelector(".nav-link.dropdown-toggle")?.innerText.trim() || "";
-        const submenuItems = item.querySelectorAll(".dropdown-menu .dropdown-item");
+      desktopMenu.querySelectorAll(".nav-item.dropdown").forEach((item) => {
+        const title =
+          item.querySelector(".nav-link.dropdown-toggle")?.innerText.trim() ||
+          "";
+        const submenuItems = item.querySelectorAll(
+          ".dropdown-menu .dropdown-item"
+        );
 
         const li = document.createElement("li");
         li.classList.add("nav-item", "dropdown");
@@ -36,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const ul = document.createElement("ul");
         ul.classList.add("dropdown-menu");
 
-        submenuItems.forEach(sub => {
+        submenuItems.forEach((sub) => {
           const a = document.createElement("a");
           a.href = sub.getAttribute("href");
           a.classList.add("dropdown-item");
@@ -60,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 300);
 });
 
-
 // =========================================================
 // 2. FOOTER ANIMATION
 // =========================================================
@@ -71,7 +83,7 @@ function initFooterAnimation() {
 
     const observer = new IntersectionObserver(
       (entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
             observer.unobserve(entry.target);
@@ -81,7 +93,6 @@ function initFooterAnimation() {
       { threshold: 0.2 }
     );
 
-    footerCards.forEach(el => observer.observe(el));
+    footerCards.forEach((el) => observer.observe(el));
   }, 500);
 }
-
