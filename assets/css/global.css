@@ -377,16 +377,32 @@ nav.navbar {
 /* =========================================================
    RESPONSIVE SECTION HEADERS
 ========================================================= */
+@media (max-width: 1440px) {
+  .school-tour {
+    padding: 10px 20px 1%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+    .school-tour {
+    padding: 10px 20px 2%;
+    margin-top: 5px;
+    margin-bottom: 15%;
+  }
+}
+
 @media (max-width: 768px) {
   .section-header h2 {
     font-size: 1.8rem;
   }
 
   .school-tour {
-  background: #e8f3ff;
-  padding: 10px 20px 18%;
-  margin-top: 7px;
-}
+    padding: 10px 20px 7%;
+    margin-top: 7px;
+    margin-bottom: 10%;
+  }
 
   .section-header h1 {
     margin-top: -2%;
@@ -400,11 +416,10 @@ nav.navbar {
   .section-header h2 {
     font-size: 1.6rem;
   }
-    .school-tour {
-  background: #e8f3ff;
-  padding: 10px 20px 24%;
-  margin-top: 7px;
-}
+  .school-tour {
+    padding: 10px 20px 22%;
+    margin-top: 7px;
+  }
 
   .section-header p,
   .section-header p {
