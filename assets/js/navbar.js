@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const berandaLink = document.createElement("a");
       berandaLink.classList.add("nav-link");
-      berandaLink.href = "/index.html"; // pakai absolute path
+      berandaLink.href = "/index.html"; 
       berandaLink.textContent = "BERANDA";
 
       berandaLi.appendChild(berandaLink);
