@@ -1,0 +1,118 @@
+/* ============================================
+   SMK PARAMITHA 404 PAGE STYLE
+   ============================================ */
+
+/* Global Layout */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #1a2254;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 404 Section */
+.notfound-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Card */
+.nf-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 70px 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  animation: fadeSlideUp 1s ease both;
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Logo */
+.nf-logo {
+  width: 110px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+/* 404 Code */
+.nf-code {
+  font-size: 8rem;
+  font-weight: 800;
+  color: #b30000; /* Merah Paramitha */
+  margin-bottom: 10px;
+}
+
+/* Title */
+.nf-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a2254; /* Navy Paramitha */
+}
+
+/* Description */
+.nf-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+/* Button */
+.nf-btn {
+  background: #1a2254; /* Navy */
+  color: #fff;
+  padding: 14px 38px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.nf-btn:hover {
+  background: #001b39;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nf-code {
+    font-size: 5rem;
+  }
+  .nf-card {
+    padding: 50px 30px;
+  }
+  .nf-btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
