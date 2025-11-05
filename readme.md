@@ -84,8 +84,7 @@ PARAMITHASCHOOLPROJECT/
 │   │   ├─ Main Icon/
 │   │   │   ├─ banner.jpg
 │   │   │   ├─ Favicon.jpg
-│   │   │   └─  paramitha.png
-│   │
+│   │   │   └─ paramitha.png
 │   │
 │   ├─ js/
 │   │   └─ navbar.js
@@ -108,6 +107,7 @@ PARAMITHASCHOOLPROJECT/
 ├─ 404.html
 ├─ index.html
 └─ readme.md
+
 
 ---
 
