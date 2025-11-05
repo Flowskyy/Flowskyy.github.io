@@ -108,8 +108,6 @@ Jayalah Paramitha Kita`;
           document.getElementById("footer").innerHTML = footer;
 
           if (typeof initMobileMenu === "function") initMobileMenu();
-
-          // panggil animasi footer yg udah didefinisiin di navbar.js
           if (typeof initFooterAnimation === "function") initFooterAnimation();
         })
         .catch((err) => console.error("Gagal memuat header/footer:", err));

@@ -133,10 +133,7 @@
           document.getElementById("header").innerHTML = header;
           document.getElementById("footer").innerHTML = footer;
 
-          // kalau punya menu mobile
           if (typeof initMobileMenu === "function") initMobileMenu();
-
-          // panggil animasi footer yg udah didefinisiin di navbar.js
           if (typeof initFooterAnimation === "function") initFooterAnimation();
         })
         .catch((err) => console.error("Gagal memuat header/footer:", err));

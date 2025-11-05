@@ -1,13 +1,17 @@
 /* =========================================================
-   GALERI — COMING SOON PAGE
+   FILE: COMINGSOON.CSS
+   SECTION: COMINGSOON
+   DESCRIPTION: Tampilan untuk bagian Coming Soon (Segera Hadir)
+   AUTHOR: Team SMK Paramitha Jakarta Web Project
    ========================================================= */
+
+
 
 /* -------------------------
    1. BASE STYLES
    ------------------------- */
 body {
   background-color: #ffffff;
-  font-family: "Poppins", sans-serif;
   margin: 0;
   overflow-x: hidden;
 }

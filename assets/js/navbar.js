@@ -3,7 +3,7 @@
 // =========================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("[UPDATE 0.14.04] Memulai inisialisasi navbar dan footer...");
+  console.log("[UPDATE 0.14.06] Memulai inisialisasi navbar dan footer...");
 
   const checkHeaderLoaded = setInterval(() => {
     const header = document.getElementById("header");
