@@ -34,7 +34,7 @@ Website ini menampilkan berbagai informasi penting mengenai sekolah seperti seja
 ---
 
 ## 🧱 Struktur Folder
-
+```
 PARAMITHASCHOOLPROJECT/
 │
 ├─ .vscode/
@@ -84,8 +84,7 @@ PARAMITHASCHOOLPROJECT/
 │   │   ├─ Main Icon/
 │   │   │   ├─ banner.jpg
 │   │   │   ├─ Favicon.jpg
-│   │   │   └─  paramitha.png
-│   │
+│   │   │   └─ paramitha.png
 │   │
 │   ├─ js/
 │   │   └─ navbar.js
@@ -108,6 +107,7 @@ PARAMITHASCHOOLPROJECT/
 ├─ 404.html
 ├─ index.html
 └─ readme.md
+```
 
 ---
 
@@ -140,7 +140,7 @@ PARAMITHASCHOOLPROJECT/
 
 | Peran | Nama |
 |-------|------|
-| **Project Manager** | Eben Heazer |
+| **Project Manager** | Eben Haezer |
 | **Assistant PM** | Patricia Wening |
 | **Web Design Division** | Naraya, Asta, Nana |
 | **Front-End Development Division** | Calvin, Keyko |
