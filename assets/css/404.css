@@ -1,77 +1,88 @@
 /* ============================================
-   SMK PARAMITHA 404 PAGE STYLE
+   SMK PARAMITHA 404 PAGE STYLE (FINAL RESPONSIVE)
+   FONT: PLUS JAKARTA SANS
    ============================================ */
 
-/* Global Layout */
+/* ===== IMPORT FONT ===== */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+/* ===== GLOBAL LAYOUT ===== */
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   background-color: #ffffff;
   color: #1a2254;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* 404 Section */
+/* ===== SECTION ===== */
 .notfound-section {
   text-align: center;
   padding: 60px 20px;
 }
 
-/* Card */
+/* ===== CARD ===== */
 .nf-card {
   background: #fff;
-  border-radius: 24px;
-  padding: 70px 50px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 28px;
+  padding: 80px 60px;
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.08);
   display: inline-block;
   animation: fadeSlideUp 1s ease both;
-  max-width: 600px;
+  max-width: 700px;
   width: 90%;
+  transition: all 0.3s ease;
 }
 
-/* Logo */
+.nf-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 55px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== LOGO ===== */
 .nf-logo {
-  width: 110px;
+  width: 120px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   animation: floatLogo 3s ease-in-out infinite;
 }
 
-/* 404 Code */
+/* ===== TEXT STYLES ===== */
 .nf-code {
   font-size: 8rem;
   font-weight: 800;
   color: #b30000; /* Merah Paramitha */
   margin-bottom: 10px;
+  letter-spacing: -2px;
 }
 
-/* Title */
 .nf-title {
   font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 15px;
   color: #1a2254; /* Navy Paramitha */
 }
 
-/* Description */
 .nf-desc {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 35px;
-  line-height: 1.7;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
-/* Button */
+/* ===== BUTTON ===== */
 .nf-btn {
-  background: #1a2254; /* Navy */
+  background: #1a2254;
   color: #fff;
-  padding: 14px 38px;
+  padding: 14px 40px;
   border-radius: 40px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   display: inline-block;
   transition: all 0.3s ease;
@@ -82,7 +93,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* Animations */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeSlideUp {
   0% {
     opacity: 0;
@@ -103,16 +114,62 @@ body {
   }
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* ===== RESPONSIVE ===== */
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .nf-card {
+    padding: 50px 25px;
+    border-radius: 22px;
+  }
+  .nf-logo {
+    width: 90px;
+    margin-bottom: 15px;
+  }
   .nf-code {
     font-size: 5rem;
   }
-  .nf-card {
-    padding: 50px 30px;
+  .nf-title {
+    font-size: 1.5rem;
+  }
+  .nf-desc {
+    font-size: 1rem;
   }
   .nf-btn {
     padding: 12px 28px;
     font-size: 0.95rem;
+  }
+}
+
+/* Tablet (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .nf-card {
+    padding: 60px 40px;
+  }
+  .nf-code {
+    font-size: 6rem;
+  }
+  .nf-title {
+    font-size: 1.75rem;
+  }
+  .nf-desc {
+    font-size: 1.05rem;
+  }
+}
+
+/* Laptop (769px - 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .nf-card {
+    padding: 70px 50px;
+  }
+  .nf-code {
+    font-size: 7rem;
+  }
+}
+
+/* Large Desktop (1201px+) */
+@media (min-width: 1201px) {
+  .nf-card {
+    max-width: 700px;
   }
 }
