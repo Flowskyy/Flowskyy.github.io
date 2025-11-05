@@ -140,7 +140,7 @@ PARAMITHASCHOOLPROJECT/
 
 | Peran | Nama |
 |-------|------|
-| **Project Manager** | Eben Heazer |
+| **Project Manager** | Eben Haezer |
 | **Assistant PM** | Patricia Wening |
 | **Web Design Division** | Naraya, Asta, Nana |
 | **Front-End Development Division** | Calvin, Keyko |
