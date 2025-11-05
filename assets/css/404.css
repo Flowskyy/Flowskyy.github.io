@@ -1,12 +1,11 @@
-/* ============================================
-   SMK PARAMITHA 404 PAGE STYLE (FINAL RESPONSIVE)
-   FONT: PLUS JAKARTA SANS
-   ============================================ */
+/* =========================================================
+   File: assets/css/404.css
+   Description: 404 Not Found Page Stylesheet (Responsive)
+   Author: Team SMK Paramitha Jakarta Web Project
+   ========================================================= */
 
-/* ===== IMPORT FONT ===== */
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
-/* ===== GLOBAL LAYOUT ===== */
 body {
   margin: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -16,70 +15,58 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow-x: hidden;
+  padding: 0 20px;
 }
 
-/* ===== SECTION ===== */
 .notfound-section {
   text-align: center;
   padding: 60px 20px;
 }
 
-/* ===== CARD ===== */
 .nf-card {
   background: #fff;
-  border-radius: 28px;
-  padding: 80px 60px;
-  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  padding: 70px 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   display: inline-block;
   animation: fadeSlideUp 1s ease both;
-  max-width: 700px;
-  width: 90%;
-  transition: all 0.3s ease;
+  max-width: 600px;
+  width: 100%;
 }
 
-.nf-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 55px rgba(0, 0, 0, 0.1);
-}
-
-/* ===== LOGO ===== */
 .nf-logo {
-  width: 120px;
+  width: 110px;
   height: auto;
   margin-bottom: 25px;
   animation: floatLogo 3s ease-in-out infinite;
 }
 
-/* ===== TEXT STYLES ===== */
 .nf-code {
   font-size: 8rem;
   font-weight: 800;
-  color: #b30000; /* Merah Paramitha */
+  color: #b30000;
   margin-bottom: 10px;
-  letter-spacing: -2px;
+  line-height: 1;
 }
 
 .nf-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 15px;
-  color: #1a2254; /* Navy Paramitha */
+  margin-bottom: 10px;
+  color: #1a2254;
 }
 
 .nf-desc {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 35px;
-  line-height: 1.8;
-  font-weight: 400;
+  line-height: 1.7;
 }
 
-/* ===== BUTTON ===== */
 .nf-btn {
   background: #1a2254;
   color: #fff;
-  padding: 14px 40px;
+  padding: 14px 38px;
   border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
@@ -93,7 +80,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* ===== ANIMATIONS ===== */
 @keyframes fadeSlideUp {
   0% {
     opacity: 0;
@@ -114,17 +100,29 @@ body {
   }
 }
 
-/* ===== RESPONSIVE ===== */
-
-/* Mobile (≤480px) */
-@media (max-width: 480px) {
+@media (max-width: 991px) {
   .nf-card {
-    padding: 50px 25px;
-    border-radius: 22px;
+    padding: 60px 40px;
+    max-width: 500px;
+  }
+  .nf-code {
+    font-size: 6rem;
+  }
+  .nf-title {
+    font-size: 1.8rem;
+  }
+  .nf-desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nf-card {
+    padding: 45px 28px;
+    border-radius: 20px;
   }
   .nf-logo {
     width: 90px;
-    margin-bottom: 15px;
   }
   .nf-code {
     font-size: 5rem;
@@ -133,43 +131,26 @@ body {
     font-size: 1.5rem;
   }
   .nf-desc {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
   }
   .nf-btn {
-    padding: 12px 28px;
-    font-size: 0.95rem;
+    padding: 12px 26px;
+    font-size: 0.9rem;
   }
 }
 
-/* Tablet (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .nf-card {
-    padding: 60px 40px;
-  }
+@media (max-width: 400px) {
   .nf-code {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   .nf-title {
-    font-size: 1.75rem;
+    font-size: 1.3rem;
   }
   .nf-desc {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
   }
-}
-
-/* Laptop (769px - 1200px) */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .nf-card {
-    padding: 70px 50px;
-  }
-  .nf-code {
-    font-size: 7rem;
-  }
-}
-
-/* Large Desktop (1201px+) */
-@media (min-width: 1201px) {
-  .nf-card {
-    max-width: 700px;
+  .nf-logo {
+    width: 80px;
   }
 }
