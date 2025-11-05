@@ -103,3 +103,5 @@ function initFooterAnimation() {
     console.log("[INFO] Observer footer diinisialisasi.");
   }, 500);
 }
+
+  
