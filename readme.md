@@ -34,7 +34,7 @@ Website ini menampilkan berbagai informasi penting mengenai sekolah seperti seja
 ---
 
 ## 🧱 Struktur Folder
-
+```
 PARAMITHASCHOOLPROJECT/
 │
 ├─ .vscode/
@@ -107,7 +107,7 @@ PARAMITHASCHOOLPROJECT/
 ├─ 404.html
 ├─ index.html
 └─ readme.md
-
+```
 
 ---
 
