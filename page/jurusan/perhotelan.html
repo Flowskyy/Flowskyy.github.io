@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jurusan Perhotelan | SMK Paramitha Jakarta</title>
+
     <link rel="icon" type="image/png" href="/assets/img/Main Icon/Favicon.jpg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="../../assets/css/global.css" />
+    <link rel="stylesheet" href="../../assets/css/jurusan.css" />
   </head>
 
   <body class="fade-in">
@@ -18,9 +21,7 @@
     <!-- =========================
          HERO JURUSAN
     ========================= -->
-    <section
-      class="jurusan-hero"
-      style="background: url('../../assets/img/Main Icon/banner.jpg') center center/cover no-repeat;">
+    <section class="jurusan-hero" style="background: url('../../assets/img/Main Icon/banner.jpg') center center/cover no-repeat;">
       <div class="overlay"></div>
       <div class="container text-center text-white" data-aos="fade-down">
         <h1 class="jurusan-title">Jurusan Perhotelan</h1>
@@ -31,43 +32,46 @@
     </section>
 
     <!-- =========================
-         DESKRIPSI & CAROUSEL
+         CONTENT + CAROUSEL
     ========================= -->
     <section class="jurusan-content">
       <div class="container">
         <div class="row align-items-center">
-          <!-- === Carousel === -->
+          
+          <!-- ==== CAROUSEL ==== -->
           <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
             <div id="carouselPerhotelan" class="carousel slide" data-bs-ride="carousel">
+              
               <div class="carousel-inner rounded-4 shadow">
                 <div class="carousel-item active">
-                  <a href="#img1">
-                    <img src="../../assets/img/carousel/Carousel 1.jpg" class="d-block w-100" alt="Slide 1" />
-                  </a>
+                  <img src="../../assets/img/carousel/Carousel 4.jpg" class="d-block w-100 preview-img" data-index="0" alt="Slide 1" />
                 </div>
                 <div class="carousel-item">
-                  <a href="#img2">
-                    <img src="../../assets/img/carousel/Carousel 2.jpg" class="d-block w-100" alt="Slide 2" />
-                  </a>
+                  <img src="../../assets/img/carousel/Carousel 5.jpg" class="d-block w-100 preview-img" data-index="1" alt="Slide 2" />
                 </div>
                 <div class="carousel-item">
-                  <a href="#img3">
-                    <img src="../../assets/img/carousel/Carousel 3.jpg" class="d-block w-100" alt="Slide 3" />
-                  </a>
+                  <img src="../../assets/img/carousel/Carousel 6.jpg" class="d-block w-100 preview-img" data-index="2" alt="Slide 3" />
                 </div>
               </div>
+
+              <!-- Prev / Next -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerhotelan" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPerhotelan" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+
             </div>
           </div>
 
-          <!-- === Deskripsi === -->
+          <!-- ==== DESKRIPSI ==== -->
           <div class="col-lg-6" data-aos="fade-left">
             <h2 class="jurusan-heading">Tentang Jurusan Perhotelan</h2>
             <p class="jurusan-desc">
               Jurusan Perhotelan di SMK Paramitha Jakarta mempersiapkan siswa untuk menjadi ahli di bidang
-              <strong>manajemen hotel dan layanan tamu profesional</strong>.
-              Siswa akan belajar tentang operasional hotel, front office, housekeeping, food & beverage, serta pelayanan pelanggan.
-              Jurusan ini cocok bagi yang suka melayani orang, tertarik dunia hospitality, dan ingin berkarier sebagai hotelier,
-              receptionist, atau melanjutkan pendidikan di bidang manajemen perhotelan.
+              <strong>manajemen hotel dan layanan tamu profesional</strong>. Siswa mempelajari front office, housekeeping,
+              food & beverage, hingga pelayanan pelanggan. Cocok bagi yang ingin bekerja di dunia hospitality atau melanjutkan pendidikan.
             </p>
             <a href="/index.html" class="jurusan-btn">
               <i class="bi bi-arrow-left-circle me-2"></i>Kembali ke Beranda
@@ -78,47 +82,42 @@
     </section>
 
     <!-- =========================
-         LIGHTBOX
+         LIGHTBOX (JS VERSION)
     ========================= -->
-    <div class="lightbox" id="img1">
-      <a href="#" class="close"></a>
-      <img src="../../assets/img/carousel/Carousel 1.jpg" alt="Foto 1" />
-    </div>
-    <div class="lightbox" id="img2">
-      <a href="#" class="close"></a>
-      <img src="../../assets/img/carousel/Carousel 2.jpg" alt="Foto 2" />
-    </div>
-    <div class="lightbox" id="img3">
-      <a href="#" class="close"></a>
-      <img src="../../assets/img/carousel/Carousel 3.jpg" alt="Foto 3" />
-    </div>
+    <div id="lightbox" class="lightbox-js">
+  <span class="close-lightbox">&times;</span>
+  <img id="lightbox-img" src="" alt="Preview" />
+  <button class="lightbox-btn prev">&lt;</button>
+  <button class="lightbox-btn next">&gt;</button>
+</div>
+
 
     <!-- FOOTER -->
     <div id="footer"></div>
 
     <!-- =========================
-         SCRIPT LOAD
+         SCRIPT
     ========================= -->
     <script src="/assets/js/navbar.js"></script>
     <script>
       Promise.all([
-        fetch("../../assets/components/header.html").then((res) => res.text()),
-        fetch("../../assets/components/footer.html").then((res) => res.text()),
-      ])
-        .then(([header, footer]) => {
-          document.getElementById("header").innerHTML = header;
-          document.getElementById("footer").innerHTML = footer;
-          if (typeof initMobileMenu === "function") initMobileMenu();
-          if (typeof initFooterAnimation === "function") initFooterAnimation();
-        })
-        .catch((err) => console.error("Gagal memuat header/footer:", err));
-    </script>
+        fetch("../../assets/components/header.html").then(res => res.text()),
+        fetch("../../assets/components/footer.html").then(res => res.text())
+      ]).then(([header, footer]) => {
+        document.getElementById("header").innerHTML = header;
+        document.getElementById("footer").innerHTML = footer;
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ once: true, duration: 900, offset: 120 });
+        if (typeof initMobileMenu === "function") initMobileMenu();
+        if (typeof initFooterAnimation === "function") initFooterAnimation();
+      });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 900, offset: 120 });</script>
+
+    <!-- Lightbox JS -->
+    <script src="/assets/js/lightboxjurusan.js"></script>
+
   </body>
 </html>
