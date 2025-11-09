@@ -19,111 +19,105 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/css/global.css" />
+    <link rel="stylesheet" href="../../assets/css/beranda.css" />
   </head>
 
   <body>
     <div id="header"></div>
 
+    <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1>
-          Selamat Datang di <br />
-          SMK PARAMITHA JAKARTA
-        </h1>
+        <h1>Selamat Datang di <br />SMK PARAMITHA JAKARTA</h1>
         <p class="hero-subtitle">Membentuk Generasi Unggul dan Siap Kerja!</p>
       </div>
     </section>
 
-    <section class="carousel">
+    <!-- CAROUSEL BERITA -->
+    <section class="berita-carousel-section py-5">
       <div class="container">
-        <div class="section-header text-center mt-5 mb-4">
+        <div class="section-header text-center mb-4">
           <h2>Berita Terkini</h2>
           <p>
             Berita terbaru seputar kegiatan dan informasi SMK Paramitha Jakarta
           </p>
         </div>
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
+
+        <div class="berita-carousel-wrapper">
+          <!-- Carousel kiri -->
+          <div
+            id="beritaCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div
+                class="carousel-item active"
+                data-title="SPMB SMK Paramitha 2 Telah Dibuka!"
+                data-caption="🌟 Saatnya kamu bergabung dengan SMK Paramitha 2 Jakarta — sekolah kejuruan yang mempersiapkanmu menghadapi dunia industri dengan keterampilan nyata!
+                Yuk, daftar sekarang lewat jalur SPMB 2025 dan pilih jurusan impianmu!"
+              >
+                <img
+                  src="assets/img/carousel/Carousel 1.jpg"
+                  class="d-block w-100"
+                  alt="Berita 1"
+                />
+              </div>
+
+              <div
+                class="carousel-item"
+                data-title="Kegiatan Front Office SMK Paramitha Jakarta"
+                data-caption="Dunia perhotelan bukan cuma soal layanan, tapi juga tentang sikap, komunikasi, dan profesionalitas.
+                Di SMK Paramitha Jakarta, siswa jurusan Perhotelan dilatih langsung agar siap kerja di industri nyata! 💼"
+              >
+                <img
+                  src="assets/img/carousel/Carousel 5.jpg"
+                  class="d-block w-100"
+                  alt="Berita 2"
+                />
+              </div>
+
+              <div
+                class="carousel-item"
+                data-title="RPL & DKV Goes to Pradita University"
+                data-caption="🚀 Mengenal lebih dekat dunia kampus!
+                Anak-anak RPL dan DKV SMK Paramitha Jakarta kesempatan menjelajahi fasilitas modern dan belajar langsung di Pradita University.
+                Dari lab teknologi hingga studio desain, semuanya menginspirasi buat masa depan yang lebih kreatif! ✨"
+              >
+                <img
+                  src="assets/img/carousel/RPL/Carousel 1.JPEG"
+                  class="d-block w-100"
+                  alt="Berita 3"
+                />
+              </div>
+            </div>
           </div>
 
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="assets/img/carousel/Carousel 1.jpg"
-                class="d-block w-100"
-                alt="Slide 1"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="assets/img/carousel/Carousel 2.jpg"
-                class="d-block w-100"
-                alt="Slide 2"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="assets/img/carousel/Carousel 3.jpg"
-                class="d-block w-100"
-                alt="Slide 3"
-              />
+          <!-- Caption kanan -->
+          <div class="berita-caption-box">
+            <h3 id="beritaTitle"></h3>
+            <p id="beritaCaption">
+            </p>
+            <div class="berita-controls">
+              <button id="prevBtn" class="btn-nav">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button id="nextBtn" class="btn-nav">
+                <i class="bi bi-chevron-right"></i>
+              </button>
             </div>
           </div>
-
-          <button
-            class="carousel-control-prev custom-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-
-          <button
-            class="carousel-control-next custom-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </section>
 
     <div id="footer"></div>
 
-    <!-- =========================================================
-     LOAD HEADER & FOOTER
-========================================================= -->
+    <!-- LOAD HEADER & FOOTER -->
     <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/beranda.js"></script>
+
     <script>
       Promise.all([
         fetch("../../assets/components/header.html").then((res) => res.text()),
@@ -132,16 +126,12 @@
         .then(([header, footer]) => {
           document.getElementById("header").innerHTML = header;
           document.getElementById("footer").innerHTML = footer;
-
           if (typeof initMobileMenu === "function") initMobileMenu();
           if (typeof initFooterAnimation === "function") initFooterAnimation();
         })
         .catch((err) => console.error("Gagal memuat header/footer:", err));
     </script>
 
-    <!-- =========================================================
-         BOOTSTRAP JS
-    ========================================================= -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
   </body>
