@@ -104,4 +104,154 @@ function initFooterAnimation() {
   }, 500);
 }
 
-  
+// =====================================================
+// SCHOOL TOUR – AUTO YT API + FADE + AUTO-SLIDE + READ MORE
+// =====================================================
+
+function initSchoolTour() {
+
+  const API_KEY = "AIzaSyA7P_bhBW1KjffeCT-YeLrdUwJy-Bk88Y4"; 
+
+  const videos = [
+    { id: "IKtbJUjFzwc" },
+    { id: "SAKA7U5BWgM" },
+    { id: "WWcn9qekEbs" }
+  ];
+
+  let index = 0;
+  let autoSlideTimer = null;
+
+  const iframe   = document.getElementById("tourVideo");
+  const titleEl  = document.getElementById("tourTitle");
+  const descEl   = document.getElementById("tourDesc");
+
+  const nextBtn  = document.getElementById("nextTour");
+  const prevBtn  = document.getElementById("prevTour");
+
+  const descWrapper = document.querySelector(".tour-desc-wrapper");
+  const readMoreBtn = document.getElementById("readMoreTour");
+
+  if (!iframe) return;
+
+  // =====================================================
+  // FETCH INFO VIDEO
+  // =====================================================
+  async function fetchVideoInfo(videoId) {
+    try {
+      const url = 
+        `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${API_KEY}`;
+
+      const res = await fetch(url);
+      const json = await res.json();
+
+      if (!json.items || json.items.length === 0) {
+        return {
+          title: "Judul tidak ditemukan",
+          description: "Deskripsi tidak tersedia."
+        };
+      }
+
+      const snip = json.items[0].snippet;
+
+      return {
+        title: snip.title || "Tanpa Judul",
+        description: snip.description || ""
+      };
+
+    } catch (e) {
+      console.warn("Gagal fetch YT:", e);
+      return {
+        title: "Kesalahan memuat judul",
+        description: "Tidak bisa mengambil deskripsi video."
+      };
+    }
+  }
+
+  // =====================================================
+  // FADE ANIMATION
+  // =====================================================
+  function fadeElement(el) {
+    el.style.opacity = 0;
+    el.style.transition = "opacity 0.5s";
+    setTimeout(() => el.style.opacity = 1, 50);
+  }
+
+  // =====================================================
+  // UPDATE VIDEO + TITLE + DESC
+  // =====================================================
+  async function updateTour() {
+    const video = videos[index];
+
+    // Reset deskripsi ke collapsed
+    if (descWrapper) {
+      descWrapper.classList.remove("expanded");
+    }
+    if (readMoreBtn) {
+      readMoreBtn.textContent = "Read More";
+    }
+
+    iframe.src = `https://www.youtube.com/embed/${video.id}`;
+    titleEl.textContent = "Memuat judul...";
+    descEl.textContent  = "Mengambil deskripsi video...";
+
+    fadeElement(iframe);
+    fadeElement(titleEl);
+    fadeElement(descEl);
+
+    const info = await fetchVideoInfo(video.id);
+
+    titleEl.textContent = info.title;
+    descEl.innerHTML    = info.description.replace(/\n/g, "<br>");
+
+    fadeElement(titleEl);
+    fadeElement(descEl);
+  }
+
+  // =====================================================
+  // AUTO SLIDE
+  // =====================================================
+  function startAutoSlide() {
+    clearInterval(autoSlideTimer);
+    autoSlideTimer = setInterval(() => {
+      index = (index + 1) % videos.length;
+      updateTour();
+    }, 20000);
+  }
+
+  // =====================================================
+  // MANUAL NEXT / PREV
+  // =====================================================
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % videos.length;
+    updateTour();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + videos.length) % videos.length;
+    updateTour();
+    startAutoSlide();
+  });
+
+  // =====================================================
+  // READ MORE SYSTEM
+  // =====================================================
+  if (readMoreBtn && descWrapper) {
+    readMoreBtn.addEventListener("click", () => {
+      const expanded = descWrapper.classList.toggle("expanded");
+      readMoreBtn.textContent = expanded ? "Sesingkatnya..." : "Selengkapnya...";
+    });
+  }
+
+  // FIRST LOAD
+  updateTour();
+  startAutoSlide();
+}
+
+
+// =====================================================
+// TRIGGER
+// =====================================================
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(initSchoolTour, 700);
+});

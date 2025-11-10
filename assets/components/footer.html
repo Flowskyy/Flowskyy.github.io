@@ -1,24 +1,48 @@
-
 <section class="school-tour">
-  <div class="section-header text-center mt-1">
-    <h2>Lingkungan Sekolah</h2>
-    <p>Jelajahi fasilitas dan kegiatan di SMK Paramitha Jakarta</p>
-  </div>
-<div>
-  <div class="video-box">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/IKtbJUjFzwc?si=hTdCInfEuJeOL_UK"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
+  <div class="school-tour-bg">
+
+    <div class="section-header text-center mt-1">
+      <h2>School Tour</h2>
+      <p>Jelajahi lingkungan dan aktivitas SMK Paramitha Jakarta</p>
+    </div>
+
+    <div class="tour-container">
+
+      <!-- LEFT: TEXT CARD -->
+      <div class="tour-card">
+
+        <h3 id="tourTitle">Judul Video</h3>
+
+        <div class="tour-desc-wrapper">
+          <p id="tourDesc"></p>
+        </div>
+
+        <button id="readMoreTour" class="readmore-btn">Selengkapnya...</button>
+
+        <div class="tour-controls">
+          <button id="prevTour" class="tour-btn">&#10094;</button>
+          <button id="nextTour" class="tour-btn">&#10095;</button>
+        </div>
+      </div>
+
+      <!-- RIGHT: VIDEO -->
+      <div class="tour-video-box">
+        <div class="video-wrapper">
+          <iframe
+            id="tourVideo"
+            src=""
+            title="School Tour Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
-
 
 
 <footer class="footer">
