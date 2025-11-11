@@ -110,8 +110,6 @@ function initFooterAnimation() {
 
 function initSchoolTour() {
 
-  const API_KEY = "AIzaSyA7P_bhBW1KjffeCT-YeLrdUwJy-Bk88Y4"; 
-
   const videos = [
     { id: "IKtbJUjFzwc" },
     { id: "SAKA7U5BWgM" },
@@ -138,8 +136,7 @@ function initSchoolTour() {
   // =====================================================
   async function fetchVideoInfo(videoId) {
     try {
-      const url = 
-        `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${API_KEY}`;
+      const url = `/.netlify/functions/yt-proxy?id=${videoId}`;
 
       const res = await fetch(url);
       const json = await res.json();
