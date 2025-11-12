@@ -1,8 +1,10 @@
-/Fasilitas    /fasilitas.html    200
-/VisiMisi     /visimisi.html     200
-/Galeri       /galeri.html       200
-/RPL          /rpl.html          200
-/Perhotelan   /perhotelan.html   200
-/DKV          /dkv.html          200
-/ULW          /ulw.html
-
+/fasilitas /fasilitas.html 200
+/visimisi /visimisi.html 200
+/galeri /galeri.html 200
+/sejarah /sejarah.html 200
+/mottonmars /mottonmars.html 200
+/rpl /rpl.html 200
+/ulw /ulw.html 200
+/dkv /dkv.html 200
+/kul /kul.html 200
+/perhotelan /perhotelan.html 200
